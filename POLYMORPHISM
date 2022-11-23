@@ -1,0 +1,51 @@
+package Polymorphism;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+shapes s=new shapes();
+Circle c=new Circle();
+Square sq=new Square();
+triangle t=new triangle();
+s.area();
+	}
+
+}
+
+package Polymorphism;
+
+public class Circle extends shapes {
+	void area() {
+    	System.out.println("Area is pi*r*r ");
+    }
+	
+
+}
+
+
+package Polymorphism;
+
+
+public class shapes {
+    void area() {
+    	System.out.println("I am in shapes");
+    }
+}
+
+package Polymorphism;
+
+public class Square extends shapes {
+	void area() {
+    	System.out.println("Area is square of sides");
+    }
+}
+
+
+package Polymorphism;
+
+public class triangle extends shapes {
+	void area() {
+    	System.out.println("Area is 0.5*h");
+    }
+}
