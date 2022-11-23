@@ -1,0 +1,71 @@
+package Inheritance;
+
+public class Box {
+    double l;
+    double h;
+    double w;
+    
+    Box(){
+    	//super(); Object class  
+     this.l=-1;
+     this.h=-1;
+     this.w=-1;
+    }
+    //cube
+    Box(double side){
+    	this.w=side;
+    	this.l=side;
+    	this.h=side;
+    }
+     Box(double l,double h,double w){
+    	 this.l=l;
+    	 this.h=h;
+    	 this.w=w;
+     }
+     
+     Box(Box old){
+    	 this.h=old.h;
+    	 this.l=old.l;
+    	 this.w=old.w;
+     }
+	public void info() {
+		System.out.print("Running the box");
+	}
+	
+	public static void main(String[]args) {
+		Box b=new Box(1,5,8);
+	Box b1=new Box(b);
+	System.out.print(b1.l+" "+b1.w+" "+b1.h);
+	boxweight box1=new boxweight(); 
+		boxweight box2=new boxweight(2,4,6,8);
+		System.out.print(box2.h+" "+box2 .weight);
+		
+		Box box5=new boxweight(5,3,3,3);
+		// box box5 is reference variable that determines 
+		// what to access and not object side that is why we cant
+		//access weight here.
+		System.out.print(box5.h );
+		
+	}
+
+}
+
+
+
+
+
+
+package Inheritance;
+
+public class boxweight extends Box {
+   double weight;
+   boxweight(){
+	   this.weight=-1;
+   }
+   boxweight(double l,double h,double w,double weight){
+	   super(l,h,w);//call the parent class constructor
+	   //used to intialize values from parent class constructor
+	   this.weight=weight;
+   }
+}
+
