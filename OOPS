@@ -1,0 +1,37 @@
+package OOPS;
+
+public class Oop {
+       
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+       student s1=new student(12,"varsha",90);
+       student s2=new student(13,"varsha1",91);
+       
+       student s3=new student(14,"varsha2",92);
+       student s4=new student(15,"varsha3",93);
+//       System.out.print(s1.name);
+//       System.out.print(s2.name);
+//       System.out.print(s3.name);
+//       System.out.print(s4.name);
+       s1.greeting();
+       
+	}
+	
+}
+class student{
+	   int rno;
+	   String name;
+	   float marks;
+	   //we need a way to add the value above properties object
+	   //by object
+	   // We need one word to access every object
+	   void greeting() {
+		   System.out.print(this.name);
+	   }
+	   student(int rno,String name,float marks){
+		   this.rno=rno;
+		   this.marks=marks;
+		   this.name=name;
+	   }
+
+}
